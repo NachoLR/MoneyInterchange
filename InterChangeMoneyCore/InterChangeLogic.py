@@ -1,0 +1,4 @@
+
+
+class InterChangeMoneyLogic(object):
+    pass
