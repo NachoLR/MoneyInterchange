@@ -3,10 +3,10 @@
 
 class UserDTO(object):
 
-    _id = None
-    _name = None
-    _amount_money = None
-    _operations_history = []
+    id = None
+    name = None
+    amount_money = None
+    operations_history = []
 
     # ====================================
     #         *** CONSTRUCTOR ***
@@ -20,27 +20,30 @@ class UserDTO(object):
     #       *** PUBLIC METHODS ***
     # ====================================
 
-    def SetId(self):
-        pass
+    def SetId(self, id):
+        self.id = id
 
     def GetID(self):
-        pass
+        return self.id
 
-    def SetUserName(self):
-        pass
+    def SetUserName(self,name):
+        self.name = name
 
     def GetUserName(self):
-        pass
+        return self.name
 
-    def SetAmountMoney(self):
-        pass
+    def SetAmountMoney(self, amount_money):
+        self.amount_money = amount_money
 
     def GetAmountMoney(self):
-        pass
+        return self.amount_money
 
-    def AddOperationToHistory(self):
-        pass
+    def SetOperationsHistory(self, operations_list):
+        self.operations_history = operations_list
+
+    def AddOperationToHistory(self, operation):
+        self.operations_history.append(operation)
 
     def GetOperationsHistory(self):
-        pass
+        return self.operations_history
 
