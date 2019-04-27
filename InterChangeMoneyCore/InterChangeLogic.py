@@ -17,18 +17,25 @@ class InterChangeMoneyLogic(object):
     #       *** PUBLIC METHODS ***
     # ====================================
 
-    def CreateNewUser(self,name, email):
-        pass
+    def CreateNewUser(self,name):
+        print(name)
+
 
     def GetUserData(self, user_id):
-        pass
+        print (user_id)
+
+    def GetUserBallance(self, user_id):
+        print(user_id)
 
     def AddMoneyToAcount(self, user_id, amount_money, description=None):
-        pass
+        print(user_id)
+        print(amount_money)
+        print(description)
 
-    def DecreaseMoney(self,user_id, amount_money, description=None):
-        pass
 
-    def MakeMoneyTransfer(self, user_id_origin, user_id_destination, amount_money, description=None):
-        pass
+    def MakeMoneyTransfer(self, user_id_origin, user_id_beneficiary, amount_money, description=None):
+        print(user_id_origin)
+        print(amount_money)
+        print(user_id_beneficiary)
+        print(description)
 
