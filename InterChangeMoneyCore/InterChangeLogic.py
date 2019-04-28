@@ -1,5 +1,4 @@
-import time
-from time import sleep
+import json
 
 from InterChangeMoneyCore.ManagerDB.DBManager import DBManager
 from InterChangeMoneyCore.DTOs.UserDto import UserDTO
@@ -43,8 +42,6 @@ class InterChangeMoneyLogic(object):
         user_data = self._parsetouserDTO(user_data)
         return JsonSerializer.DeserializeJson(user_data)
 
-    def GetUserBallance(self, user_id):
-        print(user_id)
 
     def OperateAccount(self, user_id, amount_money):
         user_data = self.db_manager.GetData(user_id)
