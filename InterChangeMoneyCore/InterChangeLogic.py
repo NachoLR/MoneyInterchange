@@ -39,7 +39,9 @@ class InterChangeMoneyLogic(object):
 
 
     def GetUserData(self, user_id):
-        user_data_dto = self.db_manager.GetData(user_id)
+        user_data = self.db_manager.GetData(user_id)
+        user_data = self._parsetouserDTO(user_data)
+        return JsonSerializer.DeserializeJson(user_data)
 
     def GetUserBallance(self, user_id):
         print(user_id)
@@ -59,6 +61,7 @@ class InterChangeMoneyLogic(object):
 
 
     def MakeMoneyTransfer(self, user_id_origin, user_id_beneficiary, amount_money):
+
         result_operation = self.OperateAccount(user_id_origin, (int(amount_money) * -1))
         if "Error:" in result_operation:
             return result_operation

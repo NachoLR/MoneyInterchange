@@ -34,7 +34,7 @@ class MoneyOperations(APIView):
             return Response(ApplicationCore.OperateAccount(user_id, amount_money))
 
         else:
-            return Response(ApplicationCore.MakeMoneyTransfer(user_id, amount_money, user_beneficiary_id))
+            return Response(ApplicationCore.MakeMoneyTransfer(user_id, user_beneficiary_id ,amount_money))
 
 
 

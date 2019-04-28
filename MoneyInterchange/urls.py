@@ -5,8 +5,8 @@ from . import views
 
 urlpatterns = [
     url(r'InterChangeMoney/$', views.InterChangeMoneyUrls.as_view()),
-    url(r'InterChangeMoney/Balance', views.MoneyOperations.as_view()),
+    url(r'InterChangeMoney/Balance/$', views.MoneyOperations.as_view()),
     url(r'InterChangeMoney/Operation', views.MoneyOperations.as_view()),
-    url(r'InterChangeMoney/TransferMoney/', views.MoneyOperations.as_view()),
+
 
 ]
