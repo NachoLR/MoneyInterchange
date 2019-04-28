@@ -1,12 +1,12 @@
 
 
 class UserDTO(object):
-
+    """
+    Class used as a data container. Data transfer object
+    """
     id = None
     name = None
     amount_money = None
-
-
 
     # ====================================
     #       *** PUBLIC METHODS ***
